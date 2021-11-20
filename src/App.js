@@ -12,7 +12,7 @@ function App() {
   //Functionality for logging in
   //TODO: Get userID
   const onLogin = () => {
-    setUserID("undefined")
+    setUserID("undefined");
     setPortal("profile");
   };
 
@@ -27,11 +27,11 @@ function App() {
 
   return (
     <div className="App">
-      {portal==="register" ? (
+      {portal === "register" ? (
         <Register onBack={onBack} onRegister={onLogin} />
-      ) : portal==="login" ? (
+      ) : portal === "login" ? (
         <Login onLogin={onLogin} onRegister={onRegister} />
-      ) : portal==="profile" ? (
+      ) : portal === "profile" ? (
         <Profile userID={userID} onBack={onBack} />
       ) : (
         <Error onBack={onBack} />
